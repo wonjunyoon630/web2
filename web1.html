@@ -7,6 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+      function setcolor(color){
+        var alist = document.querySelectorAll('a');
+          var i = 0
+          while(i < alist.length){
+          alist[i].style.color =color;
+          i = i+1;
+          }
+        
+
+      }
       function nightdayhandler(self){
          var target = document.querySelector('body')
         if(self.value ==='night'){
@@ -16,20 +26,12 @@
     
           var alist = document.querySelectorAll('a');
           var i = 0
-          while(i < alist.length){
-          alist[i].style.color ='powderblue';
-          i = i+1;
-          }
+          setcolor('powderblue')
         }else { 
           target.style.backgroundColor='white';
           target.style.color='black';
           self.value = 'night'
-          var alist = document.querySelectorAll('a');
-          var i = 0 ;
-          while(i < alist.length){
-          alist[i].style.color ='blue';
-          i = i+1;
-          }
+          setcolor('blue')
         }
       }
     </script>
